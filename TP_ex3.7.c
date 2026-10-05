@@ -32,8 +32,8 @@ link *create_list(int n)
 }
 
 
-void show_list_elements(link* list){
-	link* element = list;
+void show_list_elements(link* head){
+	link* element = head;
     while (element != NULL)
     {
         printf("adress: %p, value: %d\n",(void *)element,element->value);
@@ -41,11 +41,11 @@ void show_list_elements(link* list){
 	}
 }
 
-void add_first_element(link** list, int x){
+void add_first_element(link** head, int x){
 	link* new_element= malloc(sizeof(link));
 	new_element->value = x;
-    new_element->next = *list;
-    *list = new_element;
+    new_element->next = *head;
+    *head = new_element;
 	}
 
 int main(){

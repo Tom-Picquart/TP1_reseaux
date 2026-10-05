@@ -31,8 +31,8 @@ link *create_list(int n)
 }
 
 
-void show_list_elements(link* list){
-	link* element = list;
+void show_list_elements(link* head){
+	link* element = head;
     while (element != NULL)
     {
         printf("adress: %p, value: %d\n",(void *)element,element->value);
@@ -40,11 +40,11 @@ void show_list_elements(link* list){
 	}
 }
 
-void remove_first_element(link** list){
-	link *element = *list;
+void remove_first_element(link** head){
+	link *element = *head;
     if (element == NULL)
         return;
-    *list = element->next;
+    *head = element->next;
     free(element);
 	}
 

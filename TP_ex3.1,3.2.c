@@ -31,9 +31,9 @@ link *create_list(int n)
 }
 
 
-int return_length(link* list){
+int return_length(link* head){
 	int l=0;
-	link* element = list;
+	link* element = head;
 	while (element != NULL){
 		element= element->next;
 		l+=1;

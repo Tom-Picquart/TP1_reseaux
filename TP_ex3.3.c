@@ -31,8 +31,8 @@ link *create_list(int n)
 }
 
 
-void show_list_elements(link* list){
-	link* element = list;
+void show_list_elements(link* head){
+	link* element = head;
     while (element != NULL)
     {
         printf("adress: %p, value: %d\n",(void *)element,element->value);

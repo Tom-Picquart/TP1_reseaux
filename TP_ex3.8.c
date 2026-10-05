@@ -33,8 +33,8 @@ link *create_list(int n)
 }
 
 
-void show_list_elements(link* list){
-	link* element = list;
+void show_list_elements(link* head){
+	link* element = head;
     while (element != NULL)
     {
         printf("adress: %p, value: %d\n",(void *)element,element->value);
@@ -42,17 +42,17 @@ void show_list_elements(link* list){
 	}
 }
 
-link* append_lists(link* list1, link* list2){
-	if (list1==NULL){
-		return list2;
+link* append_lists(link* head1, link* head2){
+	if (head1==NULL){
+		return head2;
 		}
-	link* temp= list1;
+	link* temp= head1;
 	while (temp->next != NULL)
     {
         temp = temp->next;
     }
-    temp->next = list2;
-    return list1;  
+    temp->next = head2;
+    return head1;  
 	}
 
 int main(){
